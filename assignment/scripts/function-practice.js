@@ -122,3 +122,38 @@ console.log(`Test - should say [1,2,3,4]: ${extractPositives([ 1,-4,-6,2,-45,3,-
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+
+// Oddish or Evenish
+// Problem URL: https://edabit.com/challenge/r6TSNwkLZ2DgsoKiH
+// Problem description: Create a function that determines whether a number is
+// Oddish or Evenish. A number is Oddish if the sum of all of its digits is odd,
+// and a number is Evenish if the sum of all of its digits is even. If a number
+// is Oddish, return "Oddish". Otherwise, return "Evenish".
+
+function oddishOrEvenish( number ){
+  // initialize variable to keep track of sum of all digits
+  let digitSum = 0;
+
+  // absolute value, since '-' doesn't affect outcome
+  // convert number to string and string to array of characters
+  // so that I can easily cycle over each digit
+  for (x of Math.abs(number).toString().split('')){
+    // if digit is a decimal point, do nothing
+    if(!(x === ".")){
+      digitSum += Number(x);  //turn digit back into a number and add it sum
+    }
+  }
+  // if digit mod 2 is 1, return "Oddish", else "Evenish"
+  return digitSum % 2 === 1 ? "Oddish" : "Evenish";
+}
+
+console.log(`The sum of the digits in 2468 is: ${oddishOrEvenish(2468)}`);
+console.log(`The sum of the digits in 1 is: ${oddishOrEvenish(1)}`);
+console.log(`The sum of the digits in 2 is: ${oddishOrEvenish(2)}`);
+console.log(`The sum of the digits in 11 is: ${oddishOrEvenish(11)}`);
+console.log(`The sum of the digits in 1.1 is: ${oddishOrEvenish(1.1)}`);
+console.log(`The sum of the digits in 1.2 is: ${oddishOrEvenish(1.2)}`);
+console.log(`The sum of the digits in 24689 is: ${oddishOrEvenish(24689)}`);
+console.log(`The sum of the digits in 3.14 is: ${oddishOrEvenish(3.14)}`);
+console.log(`The sum of the digits in 1234.56789 is: ${oddishOrEvenish(1234.56789)}`);
+console.log(`The sum of the digits in 0.3 is: ${oddishOrEvenish(0.3)}`);
