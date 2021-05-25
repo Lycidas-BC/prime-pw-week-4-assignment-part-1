@@ -68,7 +68,7 @@ console.log(`getLast - should say 'Dopey': ${getLast( dwarfs )}`);
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 function find( value, array ){
   // loop through all elements in array
-  for (x of array){
+  for (let x of array){
     // check if element is equal to desired value
     if (x === value){
       return true;
@@ -96,7 +96,7 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 function sumAll( array0 ) {
   let sum = 0
   // TODO: loop to add items
-  for (x of array0){
+  for (let x of array0){
     sum += x;
   }
   return sum;
@@ -110,7 +110,7 @@ function extractPositives( array0 ){
   // initialize empty array
   let positives = [];
   // cycle through input array, element by element
-  for (x of array0) {
+  for (let x of array0) {
     // use my isPositive function from earlier question
     // if an element is positive, push it into my initialized function
     if (isPositive(x)){
@@ -140,7 +140,7 @@ function oddishOrEvenish( number ){
   // absolute value, since '-' doesn't affect outcome
   // convert number to string and string to array of characters
   // so that I can easily cycle over each digit
-  for (x of Math.abs(number).toString().split('')){
+  for (let x of Math.abs(number).toString().split('')){
     // if digit is a decimal point, do nothing
     if(!(x === ".")){
       digitSum += Number(x);  //turn digit back into a number and add it sum
