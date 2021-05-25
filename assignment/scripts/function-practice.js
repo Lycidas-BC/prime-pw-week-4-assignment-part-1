@@ -18,21 +18,24 @@ function helloName( name ) {
   return `Hello, ${name}!`;
 }
 // Remember to call the function to test
-console.log(`Test - should say 'Hello, Benji!': ${helloName('Benji')}`);
+console.log(`helloName - should say 'Hello, Benji!': ${helloName('Benji')}`);
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
   return firstNumber + secondNumber;
 }
 
-console.log(`Test - input (100, 823) should return 923: ${addNumbers( 100,823 )}`);
+console.log(`addNumbers - input (100, 823) should return 923: ${addNumbers( 100,823 )}`);
+console.log(`addNumbers - input (6, 13) should return 19: ${addNumbers( 6,13 )}`);
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( num0,num1,num2 ){
   return num0 * num1 * num2;
 }
-console.log(`Test - input (3, 6, 8) should return 144: ${multiplyThree( 3,6,8 )}`);
-
+console.log(`multiplyThree - input (3, 6, 8) should return 144: ${multiplyThree( 3,6,8 )}`);
+console.log(`multiplyThree - input (1, 1, 1) should return 1: ${multiplyThree( 1,1,1 )}`);
+console.log(`multiplyThree - input (4, 4, 4) should return 64: ${multiplyThree( 4,4,4 )}`);
+console.log(`multiplyThree - input (4, 4, 0) should return 0: ${multiplyThree( 4,4,0 )}`);
 
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
@@ -58,7 +61,7 @@ function getLast( array ) {
   return array[array.length - 1];
 }
 let dwarfs = [ 'Grumpy','Sleepy','Sneezy','Doc','Bashful','Happy','Dopey' ];
-console.log(`Test - should say 'Dopey': ${getLast( dwarfs )}`);
+console.log(`getLast - should say 'Dopey': ${getLast( dwarfs )}`);
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
@@ -74,8 +77,8 @@ function find( value, array ){
   // we checked all elements in the array and didn't find the value
   return false;
 }
-console.log(`Test - we are searching for 'Sleepy' in dwarfs array. Should return true: ${find('Sleepy',dwarfs)}`);
-console.log(`Test - we are searching for 'Snow White' in dwarfs array. Should return false: ${find('Snow White',dwarfs)}`);
+console.log(`find - we are searching for 'Sleepy' in dwarfs array. Should return true: ${find('Sleepy',dwarfs)}`);
+console.log(`find - we are searching for 'Snow White' in dwarfs array. Should return false: ${find('Snow White',dwarfs)}`);
 
 // ----------------------
 // Stretch Goals
@@ -98,7 +101,7 @@ function sumAll( array0 ) {
   }
   return sum;
 }
-console.log(`Test - should say 162: ${sumAll([ 1,4,6,2,45,100,4 ])}`);
+console.log(`sumAll - should say 162: ${sumAll([ 1,4,6,2,45,100,4 ])}`);
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
@@ -117,7 +120,7 @@ function extractPositives( array0 ){
   // return positives array; if there were no positives in array0, it will be empty
   return positives;
 }
-console.log(`Test - should say [1,2,3,4]: ${extractPositives([ 1,-4,-6,2,-45,3,-100,4,0 ])}`);
+console.log(`extractPositives - should say [1,2,3,4]: ${extractPositives([ 1,-4,-6,2,-45,3,-100,4,0 ])}`);
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
@@ -147,13 +150,13 @@ function oddishOrEvenish( number ){
   return digitSum % 2 === 1 ? "Oddish" : "Evenish";
 }
 
-console.log(`The sum of the digits in 2468 is: ${oddishOrEvenish(2468)}`);
-console.log(`The sum of the digits in 1 is: ${oddishOrEvenish(1)}`);
-console.log(`The sum of the digits in 2 is: ${oddishOrEvenish(2)}`);
-console.log(`The sum of the digits in 11 is: ${oddishOrEvenish(11)}`);
-console.log(`The sum of the digits in 1.1 is: ${oddishOrEvenish(1.1)}`);
-console.log(`The sum of the digits in 1.2 is: ${oddishOrEvenish(1.2)}`);
-console.log(`The sum of the digits in 24689 is: ${oddishOrEvenish(24689)}`);
-console.log(`The sum of the digits in 3.14 is: ${oddishOrEvenish(3.14)}`);
-console.log(`The sum of the digits in 1234.56789 is: ${oddishOrEvenish(1234.56789)}`);
-console.log(`The sum of the digits in 0.3 is: ${oddishOrEvenish(0.3)}`);
+console.log(`oddishOrEvenish - The sum of the digits in 2468 is: ${oddishOrEvenish(2468)}`);
+console.log(`oddishOrEvenish - The sum of the digits in 1 is: ${oddishOrEvenish(1)}`);
+console.log(`oddishOrEvenish - The sum of the digits in 2 is: ${oddishOrEvenish(2)}`);
+console.log(`oddishOrEvenish - The sum of the digits in 11 is: ${oddishOrEvenish(11)}`);
+console.log(`oddishOrEvenish - The sum of the digits in 1.1 is: ${oddishOrEvenish(1.1)}`);
+console.log(`oddishOrEvenish - The sum of the digits in 1.2 is: ${oddishOrEvenish(1.2)}`);
+console.log(`oddishOrEvenish - The sum of the digits in 24689 is: ${oddishOrEvenish(24689)}`);
+console.log(`oddishOrEvenish - The sum of the digits in 3.14 is: ${oddishOrEvenish(3.14)}`);
+console.log(`oddishOrEvenish - The sum of the digits in 1234.56789 is: ${oddishOrEvenish(1234.56789)}`);
+console.log(`oddishOrEvenish - The sum of the digits in 0.3 is: ${oddishOrEvenish(0.3)}`);
